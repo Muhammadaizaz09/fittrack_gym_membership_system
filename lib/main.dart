@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Member {
   String name;
   String email;
@@ -237,6 +236,7 @@ class _MyAppState extends State<MyApp> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadiusGeometry.circular(20),
                               ),
+
                               child: Padding(
                                 padding: EdgeInsets.all(16),
                                 child: Column(
@@ -400,36 +400,51 @@ class _MyAppState extends State<MyApp> {
                           SizedBox(height: 15),
                           ...members.map((member) {
                             return Card(
-                              color: Colors.white,
+                              color: const Color.fromARGB(255, 145, 112, 235),
                               child: ListTile(
-                                onTap: () {
                                 leading: CircleAvatar(
                                   child: Icon(Icons.person),
                                 ),
-                                title: Text(member.name),
+                                title: Text(
+                                  member.name,
+                                  style: TextStyle(
+                                    color: const Color.fromARGB(
+                                      255,
+                                      255,
+                                    ),
+                                  ),
+                                ),
                                 subtitle: Row(
                                   children: [
                                     Text(
                                       member.membership,
                                       overflow: TextOverflow.ellipsis,
-
                                       style: TextStyle(
-                                        color: Colors.deepPurpleAccent,
-                                        fontWeight: FontWeight.w500,
+                                        color: const Color.fromARGB(
+                                          255,
+                                          242,
+                                          242,
+                                          243,
+                                        ),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 17,
                                       ),
                                     ),
-                                    SizedBox(height: 10),
                                     Text(
-                                      'expiring 30 nov',
+                                      'Expires 30 nov',
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: Colors.grey,
+                                        color: const Color.fromARGB(
+                                          255,
+                                          254,
+                                          254,
+                                          254,
+                                        ),
                                         fontSize: 12,
                                       ),
                                     ),
                                   ],
                                 ),
-                                
 
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
