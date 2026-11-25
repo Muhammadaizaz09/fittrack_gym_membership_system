@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Member {
   String name;
   String email;
@@ -97,337 +98,470 @@ class _MyAppState extends State<MyApp> {
               ),
 
               // Dashboard content
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 160),
+              SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 160),
 
-                    Text(
-                      'Dashboard Overview',
+                      Text(
+                        'Dashboard Overview',
 
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Card(
-                            color: Colors.deepPurple,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
 
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.people,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-
-                                  Text(
-                                    '470',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Total members',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Card(
+                              color: Colors.deepPurple,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
                               ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Expanded(
-                          child: Card(
-                            color: Colors.deepPurple,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  Icon(Icons.people, color: Colors.white),
 
-                                  Text(
-                                    '411',
-                                    style: TextStyle(
+                              child: Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.people,
                                       color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
+                                      size: 20,
                                     ),
-                                  ),
 
-                                  Text(
-                                    'Active Members',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
+                                    Text(
+                                      '470',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(height: 10),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Card(
-                            color: Colors.deepPurple,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadiusGeometry.circular(20),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  Icon(Icons.people, color: Colors.white),
-                                  Text(
-                                    '25',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
+                                    Text(
+                                      'Total members',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    'Trainers',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Expanded(
-                          child: Card(
-                            color: Colors.deepPurple,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadiusGeometry.circular(20),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  Icon(Icons.people, color: Colors.white),
-                                  Text(
-                                    '25',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'WebTech',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                          children: [
-                            Expanded(
-                              child: Text(
-                                'Member Manegment',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                                  ],
                                 ),
                               ),
                             ),
-
-                            ElevatedButton(
-                              onPressed: () {
-                                TextEditingController nameController =
-                                    TextEditingController();
-                                TextEditingController numberController =
-                                    TextEditingController();
-                                TextEditingController emailController =
-                                    TextEditingController();
-                                TextEditingController membershipController =
-                                    TextEditingController();
-
-                                showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: Text('Add New Member'),
-
-                                      content: SingleChildScrollView(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            TextField(
-                                              controller: nameController,
-                                              decoration: InputDecoration(
-                                                labelText: 'Full Name',
-                                              ),
-                                            ),
-
-                                            TextField(
-                                              controller: numberController,
-                                              decoration: InputDecoration(
-                                                labelText: 'Phone Number',
-                                              ),
-                                            ),
-
-                                            TextField(
-                                              controller: emailController,
-                                              decoration: InputDecoration(
-                                                labelText: 'Email Address',
-                                              ),
-                                            ),
-
-                                            TextField(
-                                              controller: membershipController,
-                                              decoration: InputDecoration(
-                                                labelText: 'Membership Plan',
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                          child: Text('Cancel'),
-                                        ),
-
-                                        ElevatedButton(
-                                          onPressed: () {
-                                            Member newMember = Member(
-                                              name: nameController.text,
-                                              number: numberController.text,
-                                              email: emailController.text,
-                                              membership:
-                                                  membershipController.text,
-                                            );
-                                            addmember(newMember);
-                                            Navigator.pop(context);
-                                          },
-
-                                          child: Text('Save Member'),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
-                              },
-
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Icon(Icons.add),
-                                  SizedBox(width: 3),
-                                  Text(
-                                    'Add Members',
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ],
+                          ),
+                          SizedBox(height: 10),
+                          Expanded(
+                            child: Card(
+                              color: Colors.deepPurple,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 8),
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Search member ',
+                              child: Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Column(
+                                  children: [
+                                    Icon(Icons.people, color: Colors.white),
 
-                            hintStyle: TextStyle(color: Colors.white),
-                            prefixIcon: Icon(Icons.search, color: Colors.white),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15),
+                                    Text(
+                                      '411',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+
+                                    Text(
+                                      'Active Members',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(height: 15),
-                        ...members.map((member) {
-                          return Card(
-                            color: Colors.white,
-                            child: ListTile(
-                              leading: CircleAvatar(child: Icon(Icons.person)),
-                              title: Text(member.name),
-                              subtitle: Text(
-                                '${member.email}\n${member.number}\n${member.membership}',
-                              ),
-                              trailing: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  // Edit button
-                                  IconButton(
-                                    onPressed: () {
-                                      // We'll add edit functionality next.
-                                    },
-                                    icon: Icon(Icons.edit, color: Colors.blue),
-                                  ),
+                        ],
+                      ),
 
-                                  // Delete button
-                                  IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        members.remove(member);
-                                      });
-                                    },
-                                    icon: Icon(Icons.delete, color: Colors.red),
-                                  ),
-                                ],
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Card(
+                              color: Colors.deepPurple,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadiusGeometry.circular(20),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Column(
+                                  children: [
+                                    Icon(Icons.people, color: Colors.white),
+                                    Text(
+                                      '25',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Trainers',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          );
-                        }),
-                      ],
-                    ),
-                  ],
+                          ),
+                          SizedBox(height: 10),
+                          Expanded(
+                            child: Card(
+                              color: Colors.deepPurple,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadiusGeometry.circular(20),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Column(
+                                  children: [
+                                    Icon(Icons.people, color: Colors.white),
+                                    Text(
+                                      '25',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'WebTech',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  'Member Manegment',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+
+                              ElevatedButton(
+                                onPressed: () {
+                                  TextEditingController nameController =
+                                      TextEditingController();
+                                  TextEditingController numberController =
+                                      TextEditingController();
+                                  TextEditingController emailController =
+                                      TextEditingController();
+                                  TextEditingController membershipController =
+                                      TextEditingController();
+
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: Text('Add New Member'),
+
+                                        content: SingleChildScrollView(
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              TextField(
+                                                controller: nameController,
+                                                decoration: InputDecoration(
+                                                  labelText: 'Full Name',
+                                                ),
+                                              ),
+
+                                              TextField(
+                                                controller: numberController,
+                                                decoration: InputDecoration(
+                                                  labelText: 'Phone Number',
+                                                ),
+                                              ),
+
+                                              TextField(
+                                                controller: emailController,
+                                                decoration: InputDecoration(
+                                                  labelText: 'Email Address',
+                                                ),
+                                              ),
+
+                                              TextField(
+                                                controller:
+                                                    membershipController,
+                                                decoration: InputDecoration(
+                                                  labelText: 'Membership Plan',
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                            child: Text('Cancel'),
+                                          ),
+
+                                          ElevatedButton(
+                                            onPressed: () {
+                                              Member newMember = Member(
+                                                name: nameController.text,
+                                                number: numberController.text,
+                                                email: emailController.text,
+                                                membership:
+                                                    membershipController.text,
+                                              );
+                                              addmember(newMember);
+                                              Navigator.pop(context);
+                                            },
+
+                                            child: Text('Save Member'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(Icons.add),
+                                    SizedBox(width: 3),
+                                    Text(
+                                      'Add Members',
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 8),
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search member ',
+
+                              hintStyle: TextStyle(color: Colors.white),
+                              prefixIcon: Icon(
+                                Icons.search,
+                                color: Colors.white,
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 15),
+                          ...members.map((member) {
+                            return Card(
+                              color: Colors.white,
+                              child: ListTile(
+                                onTap: () {
+                                leading: CircleAvatar(
+                                  child: Icon(Icons.person),
+                                ),
+                                title: Text(member.name),
+                                subtitle: Row(
+                                  children: [
+                                    Text(
+                                      member.membership,
+                                      overflow: TextOverflow.ellipsis,
+
+                                      style: TextStyle(
+                                        color: Colors.deepPurpleAccent,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'expiring 30 nov',
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                
+
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    // Edit button
+                                    IconButton(
+                                      onPressed: () {
+                                        TextEditingController nameController =
+                                            TextEditingController(
+                                              text: member.name,
+                                            );
+                                        TextEditingController numberController =
+                                            TextEditingController(
+                                              text: member.number,
+                                            );
+                                        TextEditingController emailController =
+                                            TextEditingController(
+                                              text: member.email,
+                                            );
+                                        TextEditingController
+                                        membershipController =
+                                            TextEditingController(
+                                              text: member.membership,
+                                            );
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return AlertDialog(
+                                              title: Text('Edit Member'),
+                                              content: SingleChildScrollView(
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    TextField(
+                                                      controller:
+                                                          nameController,
+                                                      decoration:
+                                                          InputDecoration(
+                                                            labelText:
+                                                                'full name',
+                                                          ),
+                                                    ),
+                                                    TextField(
+                                                      controller:
+                                                          numberController,
+                                                      decoration:
+                                                          InputDecoration(
+                                                            labelText:
+                                                                'Number ',
+                                                          ),
+                                                    ),
+                                                    TextField(
+                                                      controller:
+                                                          emailController,
+                                                      decoration:
+                                                          InputDecoration(
+                                                            labelText:
+                                                                'email Address',
+                                                          ),
+                                                    ),
+                                                    TextField(
+                                                      controller:
+                                                          membershipController,
+                                                      decoration:
+                                                          InputDecoration(
+                                                            labelText:
+                                                                'Membership',
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text('cancel'),
+                                                ),
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      member.name =
+                                                          nameController.text;
+                                                      member.number =
+                                                          numberController.text;
+                                                      member.email =
+                                                          emailController.text;
+                                                      member.membership =
+                                                          membershipController
+                                                              .text;
+                                                    });
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text('Update Member'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+
+                                        // We'll add edit functionality next.
+                                      },
+
+                                      icon: Icon(
+                                        Icons.edit,
+                                        color: Colors.blue,
+                                      ),
+                                    ),
+
+                                    // Delete button
+                                    IconButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          members.remove(member);
+                                        });
+                                      },
+                                      icon: Icon(
+                                        Icons.delete,
+                                        color: Colors.red,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
