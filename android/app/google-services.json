@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "329826198184",
+    "project_id": "fittrack-gym-membership-b59d7",
+    "storage_bucket": "fittrack-gym-membership-b59d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329826198184:android:5f55a4ee45fcb9060d589d",
+        "android_client_info": {
+          "package_name": "com.example.fittrack_gym_membership_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiQPpLaFbPOAMXI-kPFwwV0YVytznUx5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
